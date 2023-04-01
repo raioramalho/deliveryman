@@ -1,14 +1,14 @@
 import { Request, Response } from "express";
-import { FindAllAvailableUseCase } from "../../../deliveries/useCases/findAllAvailable/FindAllAvailableUseCase";
+import { FindAllDeliveriesUseCase } from "./FindAllDeliveriesUseCase";
 
 
 
 export class FindAllDeliveriesController {
   async handle(request: Request, response: Response) {
     const { id_client } = request;
-    const findAllAvailableUseCase = new FindAllAvailableUseCase();
+    const findAllDeliveriesUseCase = new FindAllDeliveriesUseCase();
     try {
-      const result = await findAllAvailableUseCase.execute();
+      const result = await findAllDeliveriesUseCase.execute(+id_client);
       response.json(result);
     } catch (error) {
       throw new Error(`Handle returns: ${error}`);
