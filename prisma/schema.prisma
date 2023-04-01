@@ -15,7 +15,7 @@ model Deliveryman {
   //normalização
   created_at DateTime     @default(now())
   updated_at DateTime?    @updatedAt()
-  Deliveries Deliveries[]
+  deliveries Deliveries[]
 
   //mapeamento
   @@map("deliveryman")
@@ -29,7 +29,7 @@ model Clients {
   //normalização
   created_at DateTime     @default(now())
   updated_at DateTime?    @updatedAt()
-  Deliveries Deliveries[]
+  deliveries Deliveries[]
 
   //mapeamento
   @@map("clients")
