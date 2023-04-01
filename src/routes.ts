@@ -9,6 +9,7 @@ import { FindAllAvailableController } from './modules/deliveries/useCases/findAl
 import { ensureAuthenticateDeliveryman } from './middlewares/ensureAuthenticateDeliveryman';
 import { UpdateDeliverymanController } from './modules/deliveries/useCases/updateDeliveryman/UpdateDeliverymanController';
 import { FindAllDeliveriesController } from './modules/clients/useCases/findAllDeliveries/FindAllDeliveriesController';
+import { FindAllDeliverymanDeliveryController } from './modules/deliveryman/useCases/findAllDeliverymanDeliveries/FindAllDeliverymanDeliveryController';
 
 const routes = Router();
 
@@ -32,6 +33,9 @@ routes.get('/client/deliveries', ensureAuthenticateClient, findAllDeliveriesCont
 
 const findAllAvailableController = new FindAllAvailableController();
 routes.get('/deliveries', ensureAuthenticateDeliveryman, findAllAvailableController.handle);
+
+const findAllDeliverymanDeliveryController = new FindAllDeliverymanDeliveryController();
+routes.get('/deliveryman/deliveries', ensureAuthenticateDeliveryman, findAllDeliverymanDeliveryController.handle);
 
 const updateDeliverymanController = new UpdateDeliverymanController();
 routes.put('/deliveries/updateDeliveryman/:id', ensureAuthenticateDeliveryman, updateDeliverymanController.handle);

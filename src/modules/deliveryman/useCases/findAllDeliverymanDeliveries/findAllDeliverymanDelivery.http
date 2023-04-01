@@ -1,0 +1,4 @@
+### GET TO /deliveryman/deliveries
+GET http://localhost:3000/deliveryman/deliveries HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVsaWFyYSIsImlhdCI6MTY4MDM3ODE5MSwiZXhwIjoxNjgwNDY0NTkxLCJzdWIiOiIxIn0.mIgH0qTtJ2FUuBzgyJjNhkCvyjNKQ_ODI4cyy-rcO_Q
