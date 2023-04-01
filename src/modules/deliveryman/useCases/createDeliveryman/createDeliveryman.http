@@ -1,0 +1,8 @@
+### POST TO /client
+POST http://localhost:3000/deliveryman/ HTTP/1.1
+content-type: application/json
+
+{
+  "username": "eliara",
+  "password": "senha123"
+}
