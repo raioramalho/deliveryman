@@ -30,7 +30,7 @@ export class AuthenticateDeliverymanUseCase {
 
     //Gerar o token JSON
     try {
-      const token = sign({username}, 'raio2023-delivery', {
+      const token = sign({username}, 'raio2023-deliveryman', {
         subject: `${checkDeliveryman.id}`,
         expiresIn: '1d'
       });
